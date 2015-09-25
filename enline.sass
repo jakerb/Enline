@@ -1,0 +1,158 @@
+$colors-list: #111 #222 #333 #444 #555;
+$font-weight: 100 200 300 400 500 600 700 800 900;
+
+@each $current-weight in $font-weight {
+    $i: index($font-weight, $current-weight);
+    .fw-#{$current-weight} { 
+        font-weight: $current-weight;
+    }
+}
+
+
+@each $current-color in $colors-list {
+    $i: index($colors-list, $current-color);
+    .fc-#{$current-color} { 
+        color: $current-color;
+    }
+
+    .bc-#{$current-color} { 
+        background-color: $current-color;
+    }
+}
+
+
+//Font size .fs (100)
+@for $i from 1 through 100 {
+	.fs-#{$i} {
+		font-size: 1px * $i;
+	}
+
+	.m-l-#{$i}{
+		margin-left: 1px * $i;
+	}
+	
+	.b-r-#{$i}{ 
+		border-radius: 1px * $i;
+	}
+
+	.b-t-l-r-#{$i}{ 
+		border-top-left-radius: 1px * $i;
+	}
+
+	.b-t-r-r-#{$i}{ 
+		border-top-right-radius: 1px * $i;
+	}
+	
+	.b-b-l-r-#{$i}{ 
+		border-bottom-left-radius: 1px * $i;
+	}
+
+	.b-b-r-r-#{$i}{ 
+		border-bottom-right-radius: 1px * $i;
+	}
+
+	.m-r-#{$i}{
+		margin-right: 1px * $i;
+	}
+
+	.m-t-#{$i}{
+		margin-top: 1px * $i;
+	}
+
+	.m-b-#{$i}{
+		margin-bottom: 1px * $i;
+	}
+
+	.m-#{$i}{
+		margin: 1px * $i;
+	}
+
+	.p-l-#{$i}{
+		padding-left: 1px * $i;
+	}
+
+	.p-r-#{$i}{
+		padding-right: 1px * $i;
+	}
+
+	.p-t-#{$i}{
+		padding-top: 1px * $i;
+	}
+
+	.p-b-#{$i}{
+		padding-bottom: 1px * $i;
+	}
+
+	.p-#{$i}{
+		padding: 1px * $i;
+	}
+	
+	.w-#{$i}{
+		width: 1px * $i;
+	}
+
+	.h-#{$i}{
+		height: 1px * $i;
+	}
+}
+
+@for $i from 1 through 12 {
+	$col: 8.33333333% * $i;
+	.col-#{$i} {
+		width: $col;
+	}
+}
+
+//Margin and Padding
+@for $i from 1 through 50 {
+	$five: $i * 5;
+	.m-l-#{$five}{
+		margin-left: 5px * $i;
+	}
+
+	.m-r-#{$five}{
+		margin-right: 5px * $i;
+	}
+
+	.m-t-#{$five}{
+		margin-top: 5px * $i;
+	}
+
+	.m-b-#{$five}{
+		margin-bottom: 5px * $i;
+	}
+
+	.m-#{$five}{
+		margin: 5px * $i;
+	}
+
+	.p-l-#{$five}{
+		padding-left: 5px * $i;
+	}
+
+	.p-r-#{$five}{
+		padding-right: 5px * $i;
+	}
+
+	.p-t-#{$five}{
+		padding-top: 5px * $i;
+	}
+
+	.p-b-#{$five}{
+		padding-bottom: 5px * $i;
+	}
+
+	.p-#{$five}{
+		padding: 5px * $i;
+	}
+	
+	.w-#{$five}{
+		width: 5px * $i;
+	}
+
+	.h-#{$five}{
+		height: 5px * $i;
+	}
+}
+
+
